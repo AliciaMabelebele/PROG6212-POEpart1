@@ -1,0 +1,43 @@
+﻿<Window x:Class="CMCS.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Contract Monthly Claim System" 
+        Height="500" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#FF2D2D30">
+
+    <Border CornerRadius="10" Background="#FF3E3E42" Margin="20" VerticalAlignment="Center">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <!-- Header -->
+            <StackPanel HorizontalAlignment="Center" Margin="0,0,0,30">
+                <TextBlock Text="&#xE1E4;" FontFamily="Segoe UI Symbol" FontSize="40" Foreground="#FF4ECDC4" HorizontalAlignment="Center"/>
+                <TextBlock Text="CMCS" Foreground="White" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,5"/>
+                <TextBlock Text="Sign in to your account" Foreground="#FFADADAD" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Login Form -->
+            <StackPanel>
+                <TextBlock Text="Email" Foreground="White" Margin="5,0"/>
+                <TextBox Name="txtEmail" Text="lecturer@university.ac.za" Margin="5" Padding="10" Background="#FF505050" Foreground="White" BorderThickness="0"/>
+
+                <TextBlock Text="Password" Foreground="White" Margin="5,10,5,0"/>
+                <PasswordBox Name="txtPassword" Password="password" Margin="5" Padding="10" Background="#FF505050" Foreground="White" BorderThickness="0"/>
+
+                <TextBlock Text="Role" Foreground="White" Margin="5,10,5,0"/>
+                <ComboBox Name="cmbRole" Margin="5" Padding="10" Background="#FF505050" Foreground="White" BorderThickness="0" SelectedIndex="0">
+                    <ComboBoxItem Foreground="Black">Lecturer</ComboBoxItem>
+                    <ComboBoxItem Foreground="Black">Programme Coordinator</ComboBoxItem>
+                    <ComboBoxItem Foreground="Black">Academic Manager</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Login Button -->
+            <Button Name="btnLogin" Content="SIGN IN" Margin="5,20" Padding="15,10" 
+                    Background="#FF4ECDC4" Foreground="Black" FontWeight="Bold" 
+                    BorderThickness="0" Click="btnLogin_Click" Cursor="Hand"/>
+
+            <TextBlock Text="v1.0 - PROG6212 Prototype" Foreground="#FF6A6A6A" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Border>
+</Window>
